@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "parent": null,
+  "files": {
+    "README.md": "d1add909294258ea3f467776535c9895dce6f77c37a17fe7bc949910222ea0d2",
+    "skills/money-bird-routebook/SKILL.md": "160f1801739e2ddd1b0fbc78ad44eee360105bc0e311697617ebf27abfe8fa14",
+    "skills/money-bird-routebook/references/cli-contract.md": "9b00a491bf59a788e40fc3a8f3be7d39f74b8b1b237ca64eb9c524dab95af40f",
+    "skills/money-bird-routebook/references/recovery.md": "9c48411b1b7d4d6c9b7f3ed588287f0ad1b9602dc3aefd5ce8c6c9019edea920"
+  },
+  "signature": "e33e18996abed3e3a69234b35b835e073baa5b603a8e9f96a0a0bb9a67f6268d"
+}
