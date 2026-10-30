@@ -1,11 +1,12 @@
 {
   "version": 1,
-  "parent": "8a6577e86f2ee81434717b763bf7521ae406ebe5",
+  "parent": "29b6a92ad9142bd312304aaa4bf230bf7df22dab",
   "files": {
-    "README.md": "d1add909294258ea3f467776535c9895dce6f77c37a17fe7bc949910222ea0d2",
-    "skills/money-bird-routebook/SKILL.md": "87191eb2dc09b9f74debf8e9dd35d14830c7bcda888ca7d245506c1d604aff3c",
-    "skills/money-bird-routebook/references/cli-contract.md": "18281506d960907d7cfba78cd46ac8b7e3cc73577431f8bf5daa4a9e562ebd31",
-    "skills/money-bird-routebook/references/recovery.md": "c68bde461f42b73d4bc147f18303fcbc1084dd74110dd5f15b123ffad7f3857e"
+    "README.md": "97a4f36b4e3066cf95db1739cb0906443e3ef1eb5db922999e8be60f6e14042d",
+    "skills/money-bird-routebook/SKILL.md": "76f75e9c8d19a8fa31db9b04780cf224184820195ae5ea3a00d8a70630b03409",
+    "skills/money-bird-routebook/references/cli-contract.md": "f7ec752822dd9eab36eb396933d11f1803fd786e8927d94d66516562ce8a13fc",
+    "skills/money-bird-routebook/references/recovery.md": "c68bde461f42b73d4bc147f18303fcbc1084dd74110dd5f15b123ffad7f3857e",
+    "skills/money-bird-routebook/references/sharing.md": "73cb4b53957c2c60dafeec6a2d46987dbed8ab94b0f68f968f9d07c8c99f0a97"
   },
-  "signature": "04c2d4e64be1ae785a0b12c981285eba860c714e7cccd83a70b4f7f0f10b7648"
+  "signature": "589cbccd7f7dc8358d48cad181a5262dbe98fab541ad824bf7c7e288daa9413e"
 }

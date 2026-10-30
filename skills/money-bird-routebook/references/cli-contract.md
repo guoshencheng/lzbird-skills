@@ -1,5 +1,7 @@
 # CLI 调用契约
 
+分享路书使用独立`shares`命令和相对日整稿，详细入口见[分享创作](sharing.md)；下文个人路书patch规则不用于分享。当前分享增量仅项目源码，未发布npm或更新已安装全局CLI。
+
 本参考面向 API v1 / Money Bird CLI 0.1 系列；具体帮助以安装包 `lzbird-cli --help` 为准。使用机器可读输出，不依赖中文提示猜测结果。
 
 标准安装方式为 `npm install -g lzbird-cli`，命令名为 `lzbird-cli`，需要 Node.js ≥22.12；已发布版本可见 [npm 包页面](https://www.npmjs.com/package/lzbird-cli)。不能把 registry 查询成功当作已安装；CLI 缺失时说明安装方法，不自动执行 npm 发布或要求读取 npm 凭据。
