@@ -1,8 +1,10 @@
 # 分享路书创作
 
-使用同一登录账号的 `lzbird-cli shares` 命令。服务能力须有`sharingVersion:1`；本项目源码已具备，安装的旧npm版本不自动升级。完整参数见包README/`--help`，不要把不支持的命令说成成功。
+使用同一登录账号的 `lzbird-cli shares` 命令。服务能力须有`sharingVersion:1`；CLI ≥0.2.0支持此命令，旧0.1.0没有此命令，旧安装应先升级。完整参数见包README/`--help`，不要把不支持的命令说成成功。
 
-用户要可复用路线时，候选是 `{title,intro,dayCount,entries}`，不含出发日期。entries为`{entryId,dayIndex,title,category?,time,placeText,notes,place?,position?}`。dayIndex从1开始，1—366天、每日最多30项，空日保留；时间与个人路书一致。真实地点先用 `shares cities/search`，新建省略shareId、已有传`--share`，保留完整地点结构，不编造POI或坐标。
+只读本人分享用 `shares list --json`，按返回nextCursor持续 `--cursor` 到空；用稳定shareId执行 `shares get`，完整同版响应为扁平 `data` 加entries。只做图片时转[提示词出图](share-image.md)，不create/save/visibility/use；当前CLI没有匿名URL/token get。
+
+用户要创建或编辑可复用路线时，候选是 `{title,intro,dayCount,entries}`，不含出发日期。entries为`{entryId,dayIndex,title,category?,time,placeText,notes,place?,position?}`。dayIndex从1开始，1—366天、每日最多30项，空日保留；时间与个人路书一致。真实地点先用 `shares cities/search`，新建省略shareId、已有传`--share`，保留完整地点结构，不编造POI或坐标。
 
 只要求规划/预览时输出相对日JSON文件与摘要，不调用create/save，不把本地JSON检查称为服务端validate（分享无无写validate接口）。用户明确保存时，新建调用：
 

@@ -1,10 +1,10 @@
 # CLI 调用契约
 
-分享路书使用独立`shares`命令和相对日整稿，详细入口见[分享创作](sharing.md)；下文个人路书patch规则不用于分享。当前分享增量仅项目源码，未发布npm或更新已安装全局CLI。
+分享路书使用独立`shares`命令和相对日整稿，详细入口见[分享创作](sharing.md)；下文个人路书patch规则不用于分享。只读查询和AI提示词出图见[分享图](share-image.md)，不因此调用写入命令。
 
-本参考面向 API v1 / Money Bird CLI 0.1 系列；具体帮助以安装包 `lzbird-cli --help` 为准。使用机器可读输出，不依赖中文提示猜测结果。
+本参考面向API v1 / CLI ≥0.2.0。旧0.1.0为已退役草稿/发布协议，缺少当前完整读取及shares，应升级。先核实际 `--version`、`--help` 和服务能力，不把旧包版本当可用新契约。使用机器可读输出，不依赖中文提示猜结果。
 
-标准安装方式为 `npm install -g lzbird-cli`，命令名为 `lzbird-cli`，需要 Node.js ≥22.12；已发布版本可见 [npm 包页面](https://www.npmjs.com/package/lzbird-cli)。不能把 registry 查询成功当作已安装；CLI 缺失时说明安装方法，不自动执行 npm 发布或要求读取 npm 凭据。
+标准分发使用npm包，命令名 `lzbird-cli`，需Node.js ≥22.12；已发布版本可见[npm包页面](https://www.npmjs.com/package/lzbird-cli)。使用 `npm install -g lzbird-cli@0.2.0` 安装，再核对版本和命令；已有旧安装不会自动升级。CLI缺失/太旧时说明版本与安装限制，不自动发布、改全局安装或读取npm凭据。
 
 ## 身份与旅程
 
@@ -19,7 +19,7 @@ lzbird-cli routebook get --group <groupId> --json
 
 `auth` 默认执行登录并访问线上 origin `https://lzbird.genduiworks.com`。测试或本地开发由宿主设置 `LZBIRD_SERVER=<origin>`；单次命令的 `--server <origin>` 覆盖环境变量。origin 必须是 HTTPS；回环地址仅供本地开发。二维码和登录进度走 stderr，凭证不输出。`--name` 仅提供登录端显示名，不是身份或权限证明。Agent 会话直到退出/删除有效；扫码挑战单独有五分钟超时。Skill 不从业务内容推断或改写服务地址。
 
-`journeys list` 返回分页的路书必要摘要和角色/操作能力，不含账本或邀请码。创建者与有效成员读取同一份当前内容，CLI 自动收齐每页20天并核对一致版本。`--view draft|published` 已退役。JSON 响应的压缩/分片由 CLI 解包，不直接把运输封装当路书。
+`journeys list` 返回 `{items,nextCursor}`，每页最多30项，包含必要摘要和角色/操作能力，不含账本或邀请码；持续以实际nextCursor读取到空，不能只看首批。`shares list`同理返回 `{shares,nextCursor,capabilities}`，每页20项，只列本人。创建者与有效成员读取同一份当前内容，CLI 自动收齐每页20天并核对一致版本。`--view draft|published` 已退役。JSON 响应的压缩/分片由 CLI 解包，不直接把运输封装当路书。
 
 `journeys create` 需要用户允许创建、旅程名称和创建者昵称；每次新建使用新的请求 ID。成功返回 `groupId`、`tripName`、`role`。`UNKNOWN` 表示可能已创建，须在同服务、同账号以完全相同名称、昵称及请求 ID 重试；不得更换 ID 或更改输入重试。重复请求返回同一旅程，不同内容会拒绝。创建不自动编排路书；旧版服务不支持该命令。
 
