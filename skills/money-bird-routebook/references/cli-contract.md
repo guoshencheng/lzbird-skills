@@ -2,9 +2,9 @@
 
 分享路书使用独立`shares`命令和相对日整稿，详细入口见[分享创作](sharing.md)；下文个人路书patch规则不用于分享。只读查询和AI提示词出图见[分享图](share-image.md)，不因此调用写入命令。
 
-本参考面向API v1 / CLI ≥0.2.0。旧0.1.0为已退役草稿/发布协议，缺少当前完整读取及shares，应升级。先核实际 `--version`、`--help` 和服务能力，不把旧包版本当可用新契约。使用机器可读输出，不依赖中文提示猜结果。
+本参考面向API v1；读取/分享需CLI ≥0.2.0，活动图片上传需CLI ≥0.3.0，安装推荐0.3.0。旧0.1.0为已退役草稿/发布协议，缺少当前完整读取及shares，应升级。先核实际 `--version`、`--help` 和服务能力，不把旧包版本当可用新契约。使用机器可读输出，不依赖中文提示猜结果。
 
-标准分发使用npm包，命令名 `lzbird-cli`，需Node.js ≥22.12；已发布版本可见[npm包页面](https://www.npmjs.com/package/lzbird-cli)。使用 `npm install -g lzbird-cli@0.2.0` 安装，再核对版本和命令；已有旧安装不会自动升级。CLI缺失/太旧时说明版本与安装限制，不自动发布、改全局安装或读取npm凭据。
+标准分发使用npm包，命令名 `lzbird-cli`，需Node.js ≥22.12；已发布版本可见[npm包页面](https://www.npmjs.com/package/lzbird-cli)。使用 `npm install -g lzbird-cli@0.3.0` 安装，再核对版本和命令；已有旧安装不会自动升级。CLI缺失/太旧时说明版本与安装限制，不自动发布、改全局安装或读取npm凭据。
 
 ## 身份与旅程
 

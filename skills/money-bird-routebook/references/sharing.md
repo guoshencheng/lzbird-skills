@@ -13,7 +13,7 @@ lzbird-cli shares create --file share.json --request-id <唯一ID> --json
 lzbird-cli shares get --share <返回shareId> --json
 ```
 
-修改先get收齐所有页，保留未要求改动的活动ID/顺序/字段；构建完整候选后 `shares save --share <id> --file share.json --expected-revision <已读版本> --request-id <新ID> --json`，再get核对。分页失败或版本变化不能用部分数据覆盖。保存不自动开启；用户要求分享时再运行 `shares visibility --share <id> --enabled true --expected-revision <版本> --request-id <新ID> --json`，确认成功才交付shareUrl；停止使用false。
+修改先get收齐所有页，保留未要求改动的活动ID/顺序/字段；构建完整候选后 `shares save --share <id> --file share.json --expected-revision <已读版本> --request-id <新ID> --json`，再get核对。分页失败或版本变化不能用部分数据覆盖。新版本服务保存后即可通过 shareUrl 和 shortCode 匿名访问，无需调用 visibility。保存前向用户说明持链接者可读；空分享可保存和阅读，但不能使用为空旅程。既有 visibility 命令仅为旧客户端兼容保留：true 为兼容请求，false 被服务拒绝。旧服务仍可能要求开启，必须以实际响应和部署版本为准，不宣称本地修改已上线。
 
 用户要求应用到自己的旅程时，使用 `shares use --token <分享token> --expected-revision <所见版本> --start-date <ISO日期> --name <旅程名> --nickname 我 --request-id <新ID> --json`。作者也可传`--share`；两者二选一。不上传源entries，不先建一个空旅程；服务同步分批并统一提交，成功得到新groupId后用个人routebook get核对来源与日期。
 

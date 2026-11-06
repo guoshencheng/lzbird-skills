@@ -1,17 +1,18 @@
 {
   "version": 1,
-  "parent": "c2088a82f22de829a510e9caf9dccbfb4f858ba8",
+  "parent": "c53bdaa98ea4ca31367e28da53ec89ab8945a71a",
   "files": {
-    "README.md": "c08bc5fd8df29f307389ed28bd0942a7a8d206de160e65a7bdbd7772b3986ef5",
-    "skills/money-bird-routebook/SKILL.md": "885f4203ccb0dfec6e6864139d2d16e04df0ed7a99ab460c091cb97bb12c792e",
+    "README.md": "3a0265ffc8357f2997b41bf030c2082f4cb150fe95e9c22e8f20e4a71b9a897f",
+    "skills/money-bird-routebook/SKILL.md": "b193508de91caff47b194b09784616719673a4ad4ae07e8b6b1e5e6a99068d8d",
     "skills/money-bird-routebook/assets/miniprogram-code.png": "4a3cd2e58c9d7b5d7278a678239dd27bd6de8d67ba293e57caac6f3c2f166ab6",
     "skills/money-bird-routebook/assets/share-guide.html": "cd6e787ef7add4e1b48283e09518e0b119563ce1b7de9fbda481f7be205b06c4",
-    "skills/money-bird-routebook/references/cli-contract.md": "e1ff557925f2b54aacf531c096f5ffad5af825a96c9bf47281a8a1de7dd6aca0",
+    "skills/money-bird-routebook/references/cli-contract.md": "e9a30b7b61ca2ff93ebcfdfc110c0b63f139434d21aecda2dec359b21e59d788",
     "skills/money-bird-routebook/references/image-styles.md": "20f17806af512a7e182b72eebd92ed3b85825c994fb1625cbbe5b5705b8fdebf",
+    "skills/money-bird-routebook/references/images.md": "21239424b487d430ec5310a769bc2e4ca7edb1b016845f0b3efdebcdd12a4956",
     "skills/money-bird-routebook/references/recovery.md": "c68bde461f42b73d4bc147f18303fcbc1084dd74110dd5f15b123ffad7f3857e",
-    "skills/money-bird-routebook/references/share-image.md": "72a432bebb444bf5d3baf22045837d7b5ed48e5fee666cf1a40a7e79797e30e8",
-    "skills/money-bird-routebook/references/sharing.md": "7a9212a34410a22e717a55d7cb648f134f6f27a63223b4054fda0782f78bbcdd",
-    "skills/money-bird-routebook/scripts/render-share-guide.cjs": "1add4d2fd2ec25d4eff6f402ef7e51d2dea21a6cc71da95454f5534de01eb4a3"
+    "skills/money-bird-routebook/references/share-image.md": "7c89dd1633737c0cc407581cd465e00d158fda716b967dac470a588824d0aadd",
+    "skills/money-bird-routebook/references/sharing.md": "1b1a48caa015fea3d2ad0143609e3ad1b029d097854f4656b7c7ebed86d0e3a5",
+    "skills/money-bird-routebook/scripts/render-share-guide.cjs": "d61f78e0a0cc62ff21c7f93f926849db44ba0d5aded54b59f91c2ebcd16742bc"
   },
-  "signature": "45cae06762d5667cbc9b4f382700c6350d868765ae87c3d21d1e034fde1fd08f"
+  "signature": "0a021ab0646a3fcd4c6a96bd24869d0120fd09d5a16a2b93c9e257f2b885a399"
 }

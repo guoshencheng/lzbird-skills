@@ -81,7 +81,7 @@ lzbird-cli shares get --share <本人分享ID> --json | node <Skill目录>/scrip
 
 可用 `--browser <Chrome可执行文件>` 或宿主配置的 `LZBIRD_CHROME` 指定实际浏览器。输出为1080×300紧凑横条PNG和一个JSON结果，包含文件路径/尺寸/摘要，不包含token。输出文件已存在会拒绝覆盖，换新文件名即可。
 
-工具只接受 `ok:true`、`sharingEnabled:true`、实际合法8位 `shortCode` 及有效 `shareUrl` 的分享快照。个人路书、关闭分享、缺码或读取失败不能编造可回流卡，也不能为做图自动create/save/visibility/use；这类来源仍可生成带文字品牌的路线图，说明没有可用分享入口。图片后续会基于快照，不保证分享一直开启。
+工具只接受 `ok:true`、`sharingEnabled:true`、实际合法8位 `shortCode` 及有效 `shareUrl` 的分享快照。个人路书、旧服务返回未开启、缺码或读取失败不能编造可回流卡，也不能为做图自动create/save/visibility/use；这类来源仍可生成带文字品牌的路线图，说明没有可用分享入口。新版本保存后即可访问，无需开启；工具仍校验实际响应，以兼容尚未更新的服务。图片基于读取快照，来源后续可能更新或删除。
 
 默认仅生成正式来源的指引。测试/本地验证可显式加 `--allow-non-production`，卡片只保留一行“测试预览 · 行程码仅在对应测试/本地环境有效”；正式来源不显示测试提示、环境标签或“仅品牌展示”；禁止把这种测试卡作为线上可用分享交付。工具不会根据shareUrl请求任意服务，只用它核环境。
 

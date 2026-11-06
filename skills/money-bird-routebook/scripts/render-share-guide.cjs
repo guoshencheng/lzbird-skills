@@ -45,8 +45,8 @@ function parseArgs(args) {
 function prepareGuide(response, allowNonProduction = false) {
   if (!response || response.ok !== true || !response.data || typeof response.data !== "object") fail("INPUT_INVALID", "需要CLI退出成功时的{ok:true,data}分享响应");
   const data = response.data;
-  if (data.sharingEnabled !== true) fail("SHARE_DISABLED", "分享尚未开启，请勿生成可回流指引；工具不会自动开启分享");
-  if (typeof data.shortCode !== "string" || !CODE.test(data.shortCode)) fail("CODE_MISSING", "响应未包含合法8位行程码，请重新完整读取已开启的分享");
+  if (data.sharingEnabled !== true) fail("SHARE_DISABLED", "当前服务未提供可访问分享，请重新读取；工具不会修改分享状态");
+  if (typeof data.shortCode !== "string" || !CODE.test(data.shortCode)) fail("CODE_MISSING", "响应未包含合法8位行程码，请重新完整读取已保存的分享");
   let origin;
   try { origin = new URL(data.shareUrl).origin; }
   catch { fail("INPUT_INVALID", "分享响应缺少有效shareUrl，无法核对行程码环境"); }
