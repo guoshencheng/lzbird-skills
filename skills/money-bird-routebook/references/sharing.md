@@ -4,7 +4,7 @@
 
 只读本人分享用 `shares list --json`，按返回nextCursor持续 `--cursor` 到空；用稳定shareId执行 `shares get`，完整同版响应为扁平 `data` 加entries。只做图片时转[提示词出图](share-image.md)，不create/save/visibility/use；当前CLI没有匿名URL/token get。
 
-用户要创建或编辑可复用路线时，候选是 `{title,intro,dayCount,entries}`，不含出发日期。entries为`{entryId,dayIndex,title,category?,time,placeText,notes,place?,position?}`。dayIndex从1开始，1—366天、每日最多30项，空日保留；时间与个人路书一致。真实地点先用 `shares cities/search`，新建省略shareId、已有传`--share`，保留完整地点结构，不编造POI或坐标。
+用户要创建或编辑可复用路线时，候选是 `{title,intro,dayCount,entries}`，不含出发日期。entries为`{entryId,dayIndex,title,category?,time,placeText,notes,place?,position?,images?}`。dayIndex从1开始，1—366天、每日最多30项，空日保留。新活动按[必查项](../SKILL.md#创建活动的必查项)填写时间、类型和地点，编辑时保留已有图片。真实地点先用 `shares cities/search`，新建省略shareId、已有传`--share`，保留完整地点结构，不编造POI或坐标。新图在分享及对应活动保存后，按[图片指引](images.md)上传并读回。
 
 只要求规划/预览时输出相对日JSON文件与摘要，不调用create/save，不把本地JSON检查称为服务端validate（分享无无写validate接口）。用户明确保存时，新建调用：
 
@@ -13,7 +13,7 @@ lzbird-cli shares create --file share.json --request-id <唯一ID> --json
 lzbird-cli shares get --share <返回shareId> --json
 ```
 
-修改先get收齐所有页，保留未要求改动的活动ID/顺序/字段；构建完整候选后 `shares save --share <id> --file share.json --expected-revision <已读版本> --request-id <新ID> --json`，再get核对。分页失败或版本变化不能用部分数据覆盖。新版本服务保存后即可通过 shareUrl 和 shortCode 匿名访问，无需调用 visibility。保存前向用户说明持链接者可读；空分享可保存和阅读，但不能使用为空旅程。既有 visibility 命令仅为旧客户端兼容保留：true 为兼容请求，false 被服务拒绝。旧服务仍可能要求开启，必须以实际响应和部署版本为准，不宣称本地修改已上线。
+修改先get收齐所有页，保留未要求改动的活动ID/顺序/字段；构建完整候选后 `shares save --share <id> --file share.json --expected-revision <已读版本> --request-id <新ID> --json`，再get核对。分页失败或版本变化不能用部分数据覆盖。新版本服务保存后即可凭公开链接或行程码匿名访问，无需调用 visibility。交付时原样使用 `data.shareUrl` 和实际返回的 `shortCode`，不把内部 `shareId` 或作者工作台 URL 当作公开链接。保存前向用户说明持链接者可读；空分享可保存和阅读，但不能使用为空旅程。既有 visibility 命令仅为旧客户端兼容保留：true 为兼容请求，false 被服务拒绝。旧服务仍可能要求开启，必须以实际响应和部署版本为准，不宣称本地修改已上线。
 
 用户要求应用到自己的旅程时，使用 `shares use --token <分享token> --expected-revision <所见版本> --start-date <ISO日期> --name <旅程名> --nickname 我 --request-id <新ID> --json`。作者也可传`--share`；两者二选一。不上传源entries，不先建一个空旅程；服务同步分批并统一提交，成功得到新groupId后用个人routebook get核对来源与日期。
 
