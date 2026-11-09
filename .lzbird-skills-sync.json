@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "parent": "e5121c89c149cc3e347db85acc06ca953808ca23",
+  "parent": "18f4f44a03053ffcc2148460bc60714e1ef6409b",
   "files": {
     "README.md": "3a0265ffc8357f2997b41bf030c2082f4cb150fe95e9c22e8f20e4a71b9a897f",
-    "skills/money-bird-routebook/SKILL.md": "c0340532bdf5ea6972c555bbaaf9fd5137f6def3a4e0ae57141bc2f7962af873",
+    "skills/money-bird-routebook/SKILL.md": "7c622eac04c5969b54b184c8498c9266bcb472613c17b9c11d3055d691db24d0",
     "skills/money-bird-routebook/assets/miniprogram-code.png": "4a3cd2e58c9d7b5d7278a678239dd27bd6de8d67ba293e57caac6f3c2f166ab6",
     "skills/money-bird-routebook/assets/share-guide.html": "cd6e787ef7add4e1b48283e09518e0b119563ce1b7de9fbda481f7be205b06c4",
-    "skills/money-bird-routebook/references/cli-contract.md": "e9a30b7b61ca2ff93ebcfdfc110c0b63f139434d21aecda2dec359b21e59d788",
+    "skills/money-bird-routebook/references/cli-contract.md": "73203a05302d17573f1e71e0e35cbb9877be26e51a8a8400c3fab52d1a652f0c",
     "skills/money-bird-routebook/references/image-styles.md": "20f17806af512a7e182b72eebd92ed3b85825c994fb1625cbbe5b5705b8fdebf",
-    "skills/money-bird-routebook/references/images.md": "21239424b487d430ec5310a769bc2e4ca7edb1b016845f0b3efdebcdd12a4956",
+    "skills/money-bird-routebook/references/images.md": "6bbf82698ffd8aa1c55bf03fd71110b86eb811ab9bce2fc042cc2cc2542a0828",
     "skills/money-bird-routebook/references/recovery.md": "c68bde461f42b73d4bc147f18303fcbc1084dd74110dd5f15b123ffad7f3857e",
     "skills/money-bird-routebook/references/share-image.md": "7c89dd1633737c0cc407581cd465e00d158fda716b967dac470a588824d0aadd",
     "skills/money-bird-routebook/references/sharing.md": "1b1a48caa015fea3d2ad0143609e3ad1b029d097854f4656b7c7ebed86d0e3a5",
     "skills/money-bird-routebook/scripts/render-share-guide.cjs": "d61f78e0a0cc62ff21c7f93f926849db44ba0d5aded54b59f91c2ebcd16742bc"
   },
-  "signature": "ac94a41b299dd130f22aa7d794a0cafd96a1d4245c8ff2c7c1a567173724e217"
+  "signature": "7b0f4c6022a9128bb22ade6250bf70922827a89d8ed0d522ed5b8a9012d75397"
 }
